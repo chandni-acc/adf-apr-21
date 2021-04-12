@@ -16,11 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "dsFolderIn",
+						"referenceName": "input",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems"
+						"columnCount"
 					],
 					"storeSettings": {
 						"type": "FileServerReadSettings",
@@ -101,6 +101,7 @@
 								],
 								"storeSettings": {
 									"type": "FileServerReadSettings",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -179,7 +180,7 @@
 											"sink": {
 												"type": "DelimitedTextSink",
 												"storeSettings": {
-													"type": "AzureBlobStorageWriteSettings"
+													"type": "FileServerWriteSettings"
 												},
 												"formatSettings": {
 													"type": "DelimitedTextWriteSettings",
@@ -199,13 +200,13 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "dsFolderIn",
+												"referenceName": "input",
 												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "dsOutFolderSA",
+												"referenceName": "DelimitedText1",
 												"type": "DatasetReference"
 											}
 										]
