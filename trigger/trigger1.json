@@ -1,0 +1,29 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fileName": "planes.csv",
+					"tableName": "Planes"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-04-12T04:52:00Z",
+				"endTime": "2021-04-12T05:10:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
